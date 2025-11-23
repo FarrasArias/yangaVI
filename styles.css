@@ -633,6 +633,7 @@ body {
     font-size: 0.78rem;
     border: 1px solid rgba(0, 0, 0, 0.06);
     background: #fff;
+    color: var(--md-sys-color-on-surface);
 }
 
 .tag--primary {
@@ -641,12 +642,31 @@ body {
 }
 
 .tag--subtle {
-    background: #f4eee3;
+    background: #f4eee3; /* Canvas-tinted */
+    border-color: rgba(0, 0, 0, 0.04);
 }
 
 .tag--accent {
     background: #fef0f7;
     border-color: rgba(211, 110, 168, 0.3);
+}
+
+.tag--status {
+    background: rgba(244, 193, 65, 0.18); /* Gold wash */
+    border-color: rgba(244, 193, 65, 0.6);
+    color: #5c4200;
+}
+
+.tag--info {
+    background: rgba(173, 130, 247, 0.18); /* Purple wash */
+    border-color: rgba(173, 130, 247, 0.6);
+    color: #37276b;
+}
+
+.tag--highlight {
+    background: rgba(211, 110, 168, 0.18); /* Pink wash */
+    border-color: rgba(211, 110, 168, 0.6);
+    color: #5d2341;
 }
 
 /* Responsiveness */
@@ -686,3 +706,58 @@ body {
     }
 }
 
+/* Active sidebar item: hint of gold underline + icon color */
+.casting-nav-item.is-active {
+    background: #fff;
+    color: #201600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    border-left: 3px solid var(--md-sys-color-secondary);
+}
+
+    .casting-nav-item.is-active .casting-nav-item__icon {
+        color: var(--md-sys-color-secondary);
+    }
+
+/* Filter pills adopt tertiary colors per type */
+.pill--filter-favorites {
+    background: rgba(211, 110, 168, 0.16); /* Pink */
+    border-color: rgba(211, 110, 168, 0.5);
+    color: #5d2341;
+}
+
+.pill--filter-selected {
+    background: rgba(244, 193, 65, 0.18); /* Gold */
+    border-color: rgba(244, 193, 65, 0.6);
+    color: #5c4200;
+}
+
+.pill--filter-bilingual {
+    background: rgba(173, 130, 247, 0.18); /* Purple */
+    border-color: rgba(173, 130, 247, 0.6);
+    color: #37276b;
+}
+
+/* Talent badges tuned to palette */
+.talent-card__badge {
+    margin-left: auto;
+    font-size: 18px;
+    color: var(--md-sys-color-secondary); /* Gold for “verified” */
+}
+
+.talent-card__badge--info {
+    color: var(--md-sys-color-info); /* Purple for “sparkles” */
+}
+
+.talent-card__badge--soft {
+    color: var(--md-sys-color-pink); /* Pink for “new” */
+}
+
+/* Casting main keeps neutral background, only a thin gold top border */
+.casting-main {
+    border-radius: var(--radius-md);
+    background: #fff;
+    padding: var(--space-md) var(--space-md) var(--space-lg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-top: 3px solid rgba(244, 193, 65, 0.35); /* secondary accent */
+}

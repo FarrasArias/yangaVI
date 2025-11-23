@@ -264,6 +264,16 @@ body {
     background: var(--md-sys-color-primary);
 }
 
+.color-card__swatch--ink {
+    background: #241e18; /* “black” de sistema, más suave que #000 */
+}
+
+.color-card__swatch--white {
+    background: #ffffff;
+    /* pequeño borde para que se vea sobre fondos claros */
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
 .color-card__swatch--gold {
     background: var(--md-sys-color-secondary);
 }
@@ -675,3 +685,4 @@ body {
         justify-content: center;
     }
 }
+

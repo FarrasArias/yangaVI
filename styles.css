@@ -712,11 +712,11 @@ body {
     color: #201600;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
-    border-left: 3px solid var(--md-sys-color-secondary);
 }
 
+    /* icon just follows text color / default */
     .casting-nav-item.is-active .casting-nav-item__icon {
-        color: var(--md-sys-color-secondary);
+        color: inherit;
     }
 
 /* Filter pills adopt tertiary colors per type */
@@ -759,5 +759,5 @@ body {
     background: #fff;
     padding: var(--space-md) var(--space-md) var(--space-lg);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    border-top: 3px solid rgba(244, 193, 65, 0.35); /* secondary accent */
+    /* no gold hint on top edge */
 }

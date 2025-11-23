@@ -2,16 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <title>Identidad Visual – Brand System</title>
+    <title>Identidad Visual – Casting System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Fonts: body + headings -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet" />
 
-    <!-- Material Symbols for icon style demo -->
+    <!-- Material Symbols -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" />
 
@@ -21,7 +21,7 @@
     <!-- App bar -->
     <header class="app-bar">
         <div class="app-bar__inner">
-            <div class="app-bar__title">Visual Identity</div>
+            <div class="app-bar__title">Casting visual system</div>
             <button class="app-bar__chip">Demo view</button>
         </div>
     </header>
@@ -29,237 +29,443 @@
     <!-- Page -->
     <main class="page">
         <section class="sheet">
-            <!-- Overview -->
-            <header class="sheet__header">
-                <p class="eyebrow">Brand system</p>
-                <h1 class="display-lg">Visual Identity overview</h1>
-                <p class="body-md sheet__intro">
-                    Ejemplo de colores, tipografía, iconografía y estilo de interfaz.
-                </p>
-            </header>
+            <!-- Tabs -->
+            <nav class="tab-bar" aria-label="Vista principal">
+                <button class="tab-bar__tab is-active"
+                        data-tab-target="tab-identity"
+                        type="button">
+                    <span class="material-symbols-rounded tab-bar__icon">
+                        palette
+                    </span>
+                    Sistema de identidad
+                </button>
+                <button class="tab-bar__tab"
+                        data-tab-target="tab-casting"
+                        type="button">
+                    <span class="material-symbols-rounded tab-bar__icon">
+                        group
+                    </span>
+                    Vista de casting
+                </button>
+            </nav>
 
-            <!-- Color palette -->
-            <section class="section">
-                <h2 class="section-title">Color palette</h2>
-                <p class="body-md section__description">
-                    Paleta basada en Material Design 3: colores expresivos con buen
-                    contraste y énfasis en acciones primarias.
-                </p>
+            <!-- Identity system tab -->
+            <div class="tab-panel is-active" id="tab-identity">
+                <header class="sheet__header">
+                    <p class="eyebrow">Brand system</p>
+                    <h1 class="display-lg">Visual Identity overview</h1>
+                    <p class="body-md sheet__intro">
+                        Ejemplo de colores, tipografía, iconografía y estilo de interfaz
+                        para una plataforma de casting.
+                    </p>
+                </header>
 
-                <div class="color-grid">
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--green"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Fresh Green</p>
-                            <p class="code">@7cef7c</p>
-                            <p class="body-xs">Acciones primarias y CTAs.</p>
+                <!-- Color palette -->
+                <section class="section">
+                    <h2 class="section-title">Color palette</h2>
+                    <p class="body-md section__description">
+                        Paleta basada en Material Design 3: colores expresivos con buen
+                        contraste y énfasis en acciones primarias.
+                    </p>
+
+                    <div class="color-grid">
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--green"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Fresh Green</p>
+                                <p class="code">@7cef7c</p>
+                                <p class="body-xs">Acciones primarias y CTAs.</p>
+                            </div>
+                        </article>
+
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--gold"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Casting Gold</p>
+                                <p class="code">@f4c141</p>
+                                <p class="body-xs">Encabezados y acentos clave.</p>
+                            </div>
+                        </article>
+
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--coral"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Highlight Coral</p>
+                                <p class="code">@ea6e5e</p>
+                                <p class="body-xs">Errores y estados críticos.</p>
+                            </div>
+                        </article>
+
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--purple"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Talent Purple</p>
+                                <p class="code">@ad82f7</p>
+                                <p class="body-xs">Información y filtros.</p>
+                            </div>
+                        </article>
+
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--pink"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Brand Pink</p>
+                                <p class="code">@d36ea8</p>
+                                <p class="body-xs">Énfasis de apoyo.</p>
+                            </div>
+                        </article>
+
+                        <article class="color-card">
+                            <div class="color-card__swatch color-card__swatch--canvas"></div>
+                            <div class="color-card__body">
+                                <p class="label-md">Soft Canvas</p>
+                                <p class="code">@f2f0eb</p>
+                                <p class="body-xs">Fondo de superficie.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Typography -->
+                <section class="section">
+                    <h2 class="section-title">Typography</h2>
+                    <p class="body-md section__description">
+                        Tipografía moderna sin serif. Este demo utiliza DM Sans, con una
+                        jerarquía clara para títulos, subtítulos y cuerpo de texto.
+                    </p>
+
+                    <div class="type-grid">
+                        <div class="type-block">
+                            <p class="label-sm type-block__label">Display / H1</p>
+                            <p class="type-display">Casting de talento reimaginado</p>
+                            <p class="body-xs">
+                                Grandes titulares para home, héroes y campañas.
+                            </p>
                         </div>
-                    </article>
 
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--gold"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Casting Gold</p>
-                            <p class="code">@f4c141</p>
-                            <p class="body-xs">Encabezados y acentos clave.</p>
+                        <div class="type-block">
+                            <p class="label-sm type-block__label">Section title / H2</p>
+                            <p class="type-section">Próximos castings y briefs</p>
+                            <p class="body-xs">
+                                Títulos de secciones como “Casting calls” o “Talent library”.
+                            </p>
                         </div>
-                    </article>
 
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--coral"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Highlight Coral</p>
-                            <p class="code">@ea6e5e</p>
-                            <p class="body-xs">Errores y estados críticos.</p>
+                        <div class="type-block">
+                            <p class="label-sm type-block__label">Body / UI text</p>
+                            <p class="type-body">
+                                Texto descriptivo para tarjetas de talento, filtros, estados y
+                                ayudas contextuales.
+                            </p>
+                            <p class="body-xs">
+                                Uso principal en producto, formularios y listados.
+                            </p>
                         </div>
-                    </article>
+                    </div>
+                </section>
 
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--purple"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Talent Purple</p>
-                            <p class="code">@ad82f7</p>
-                            <p class="body-xs">Información y filtros.</p>
-                        </div>
-                    </article>
+                <!-- UI style -->
+                <section class="section">
+                    <h2 class="section-title">UI style</h2>
+                    <p class="body-md section__description">
+                        Estilo inspirado en Material Design 3: esquinas suaves, sombras
+                        sutiles y un layout ligero que mantiene el foco en el contenido.
+                    </p>
 
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--pink"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Brand Pink</p>
-                            <p class="code">@d36ea8</p>
-                            <p class="body-xs">Énfasis de apoyo.</p>
-                        </div>
-                    </article>
+                    <div class="pill-row">
+                        <span class="pill">Rounded cards</span>
+                        <span class="pill">Soft canvas</span>
+                        <span class="pill pill--primary">Bold CTAs</span>
+                    </div>
 
-                    <article class="color-card">
-                        <div class="color-card__swatch color-card__swatch--canvas"></div>
-                        <div class="color-card__body">
-                            <p class="label-md">Soft Canvas</p>
-                            <p class="code">@f2f0eb</p>
-                            <p class="body-xs">Fondo de superficie.</p>
+                    <p class="body-xs section__hint">
+                        Este sistema se extiende a:
+                    </p>
+                    <ul class="list body-xs">
+                        <li>Tarjetas de perfil de talento.</li>
+                        <li>Listas de casting y filtros.</li>
+                        <li>Dashboards para clientes.</li>
+                        <li>Layouts de marketing y email.</li>
+                    </ul>
+                </section>
+
+                <!-- Icon style -->
+                <section class="section">
+                    <h2 class="section-title">Icon style</h2>
+                    <p class="body-md section__description">
+                        Iconografía basada en <strong>Material Symbols Rounded</strong>:
+                        formas suaves, peso medio y tamaño consistente en toda la
+                        experiencia.
+                    </p>
+
+                    <div class="icon-row">
+                        <article class="icon-card">
+                            <span class="material-symbols-rounded icon-card__icon">
+                                star
+                            </span>
+                            <p class="label-md">Acciones destacadas</p>
+                            <p class="body-xs">
+                                Usar en botones primarios o badges de talento verificado.
+                            </p>
+                        </article>
+
+                        <article class="icon-card">
+                            <span class="material-symbols-rounded icon-card__icon">
+                                person
+                            </span>
+                            <p class="label-md">Perfil de talento</p>
+                            <p class="body-xs">
+                                Identifica secciones relacionadas con personas y castings.
+                            </p>
+                        </article>
+
+                        <article class="icon-card">
+                            <span class="material-symbols-rounded icon-card__icon">
+                                mail
+                            </span>
+                            <p class="label-md">Comunicación</p>
+                            <p class="body-xs">
+                                Uso en inbox, notificaciones y mensajes a talentos.
+                            </p>
+                        </article>
+                    </div>
+
+                    <ul class="list body-xs">
+                        <li>
+                            Preferir estilo <strong>Rounded</strong> para mantener la
+                            suavidad general.
+                        </li>
+                        <li>Tamaño base: 24&nbsp;px en UI, con padding generoso.</li>
+                        <li>
+                            No mezclar estilos de icono (outline, filled, duotone) en el
+                            mismo componente.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Layout & spacing -->
+                <section class="section">
+                    <h2 class="section-title">Layout & spacing</h2>
+                    <p class="body-md section__description">
+                        El layout utiliza un grid centrado con tarjetas de 900&nbsp;px
+                        máx. El sistema de espaciado sigue incrementos de 4&nbsp;px,
+                        agrupados en pasos fáciles de aplicar.
+                    </p>
+
+                    <div class="spacing-scale">
+                        <div class="spacing-swatch">
+                            <div class="spacing-swatch__bar spacing-swatch__bar--xs"></div>
+                            <p class="label-sm">XS · 4 px</p>
+                            <p class="body-xs">Separaciones mínimas, iconos, chips.</p>
                         </div>
-                    </article>
+                        <div class="spacing-swatch">
+                            <div class="spacing-swatch__bar spacing-swatch__bar--sm"></div>
+                            <p class="label-sm">SM · 8 px</p>
+                            <p class="body-xs">
+                                Distancia entre elementos de un mismo bloque.
+                            </p>
+                        </div>
+                        <div class="spacing-swatch">
+                            <div class="spacing-swatch__bar spacing-swatch__bar--md"></div>
+                            <p class="label-sm">MD · 16 px</p>
+                            <p class="body-xs">
+                                Padding interno de tarjetas y secciones.
+                            </p>
+                        </div>
+                        <div class="spacing-swatch">
+                            <div class="spacing-swatch__bar spacing-swatch__bar--lg"></div>
+                            <p class="label-sm">LG · 24 px</p>
+                            <p class="body-xs">Espacio entre secciones grandes.</p>
+                        </div>
+                    </div>
+
+                    <ul class="list body-xs">
+                        <li>Las tarjetas nunca tocan los bordes de la pantalla.</li>
+                        <li>Las secciones se separan al menos por 24&nbsp;px.</li>
+                        <li>El contenido importante se alinea en un grid de 12 columnas.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Casting view tab -->
+            <div class="tab-panel" id="tab-casting">
+                <header class="sheet__header sheet__header--compact">
+                    <p class="eyebrow">Product mock</p>
+                    <h1 class="display-lg">Casting dashboard</h1>
+                    <p class="body-md sheet__intro">
+                        Vista simplificada de cómo se aplica el sistema visual en una
+                        plataforma de casting.
+                    </p>
+                </header>
+
+                <div class="casting-layout">
+                    <!-- Sidebar -->
+                    <aside class="casting-sidebar">
+                        <div class="casting-sidebar__section">
+                            <p class="label-sm casting-sidebar__label">Castings</p>
+                            <button class="casting-nav-item is-active" type="button">
+                                <span class="material-symbols-rounded casting-nav-item__icon">
+                                    assignment
+                                </span>
+                                Campaña TV · Primavera
+                            </button>
+                            <button class="casting-nav-item" type="button">
+                                <span class="material-symbols-rounded casting-nav-item__icon">
+                                    movie
+                                </span>
+                                Película independiente
+                            </button>
+                            <button class="casting-nav-item" type="button">
+                                <span class="material-symbols-rounded casting-nav-item__icon">
+                                    campaign
+                                </span>
+                                Spot digital redes
+                            </button>
+                        </div>
+
+                        <div class="casting-sidebar__section">
+                            <p class="label-sm casting-sidebar__label">Filtros rápidos</p>
+                            <div class="pill-row pill-row--wrap">
+                                <button class="pill pill--small" type="button">
+                                    <span class="material-symbols-rounded pill__icon">
+                                        star
+                                    </span>
+                                    Favoritos
+                                </button>
+                                <button class="pill pill--small" type="button">
+                                    <span class="material-symbols-rounded pill__icon">
+                                        check_circle
+                                    </span>
+                                    Preselección
+                                </button>
+                                <button class="pill pill--small" type="button">
+                                    <span class="material-symbols-rounded pill__icon">
+                                        language
+                                    </span>
+                                    Bilingüe ES/EN
+                                </button>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Main content -->
+                    <section class="casting-main">
+                        <header class="casting-main__header">
+                            <div>
+                                <p class="eyebrow">Talentos</p>
+                                <h2 class="section-title">Preselección principal</h2>
+                            </div>
+                            <button class="primary-cta" type="button">
+                                <span class="material-symbols-rounded primary-cta__icon">
+                                    send
+                                </span>
+                                Compartir shortlist
+                            </button>
+                        </header>
+
+                        <div class="casting-grid">
+                            <!-- Talent card 1 -->
+                            <article class="talent-card">
+                                <header class="talent-card__header">
+                                    <div class="talent-avatar">M</div>
+                                    <div>
+                                        <p class="label-md">María López</p>
+                                        <p class="body-xs">28 · Barcelona · Ella / She</p>
+                                    </div>
+                                    <span class="material-symbols-rounded talent-card__badge"
+                                          title="Talent verificado">
+                                        verified
+                                    </span>
+                                </header>
+                                <p class="body-xs talent-card__bio">
+                                    Perfil versátil para comedia ligera y drama. Experiencia en TV,
+                                    publicidad y teatro musical.
+                                </p>
+                                <div class="talent-tags">
+                                    <span class="tag tag--primary">Lead</span>
+                                    <span class="tag tag--subtle">Comedia</span>
+                                    <span class="tag tag--accent">Bilingüe ES/EN</span>
+                                </div>
+                            </article>
+
+                            <!-- Talent card 2 -->
+                            <article class="talent-card">
+                                <header class="talent-card__header">
+                                    <div class="talent-avatar">J</div>
+                                    <div>
+                                        <p class="label-md">José Herrera</p>
+                                        <p class="body-xs">35 · Ciudad de México · Él / He</p>
+                                    </div>
+                                    <span class="material-symbols-rounded talent-card__badge talent-card__badge--info"
+                                          title="Nueva propuesta">
+                                        sparkles
+                                    </span>
+                                </header>
+                                <p class="body-xs talent-card__bio">
+                                    Fuerte presencia en cámara, ideal para papeles intensos y
+                                    personajes con arco emocional marcado.
+                                </p>
+                                <div class="talent-tags">
+                                    <span class="tag tag--primary">Callback</span>
+                                    <span class="tag tag--subtle">Drama</span>
+                                    <span class="tag tag--subtle">Spot 30&quot;</span>
+                                </div>
+                            </article>
+
+                            <!-- Talent card 3 -->
+                            <article class="talent-card">
+                                <header class="talent-card__header">
+                                    <div class="talent-avatar">L</div>
+                                    <div>
+                                        <p class="label-md">Lucía Martín</p>
+                                        <p class="body-xs">22 · Madrid · Ella / She</p>
+                                    </div>
+                                    <span class="material-symbols-rounded talent-card__badge talent-card__badge--soft"
+                                          title="Nueva en la base">
+                                        fiber_new
+                                    </span>
+                                </header>
+                                <p class="body-xs talent-card__bio">
+                                    Energía fresca para campañas digitales. Contenido orgánico
+                                    en redes y experiencia como creadora.
+                                </p>
+                                <div class="talent-tags">
+                                    <span class="tag tag--subtle">Digital</span>
+                                    <span class="tag tag--accent">Redes sociales</span>
+                                    <span class="tag tag--subtle">Gen Z</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
                 </div>
-            </section>
-
-            <!-- Typography -->
-            <section class="section">
-                <h2 class="section-title">Typography</h2>
-                <p class="body-md section__description">
-                    Tipografía moderna sin serif. En producción se puede usar Fellix o
-                    una familia similar. Este demo utiliza una pila de sistema, pero
-                    respeta la jerarquía de títulos y texto.
-                </p>
-
-                <div class="type-grid">
-                    <div class="type-block">
-                        <p class="label-sm type-block__label">Display / H1</p>
-                        <p class="type-display">Casting talent reimaginado</p>
-                        <p class="body-xs">
-                            Grandes titulares para home, héroes y campañas.
-                        </p>
-                    </div>
-
-                    <div class="type-block">
-                        <p class="label-sm type-block__label">Section title / H2</p>
-                        <p class="type-section">Próximos casting y briefs</p>
-                        <p class="body-xs">
-                            Títulos de secciones como “Casting calls” o “Talent library”.
-                        </p>
-                    </div>
-
-                    <div class="type-block">
-                        <p class="label-sm type-block__label">Body / UI text</p>
-                        <p class="type-body">
-                            Texto descriptivo para tarjetas de talento, filtros, estados y
-                            ayudas contextuales.
-                        </p>
-                        <p class="body-xs">
-                            Uso principal en producto, formularios y listados.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- UI style -->
-            <section class="section">
-                <h2 class="section-title">UI style</h2>
-                <p class="body-md section__description">
-                    Estilo inspirado en Material Design 3: esquinas suaves, sombras
-                    sutiles y un layout ligero que mantiene el foco en el contenido.
-                </p>
-
-                <div class="pill-row">
-                    <span class="pill">Rounded cards</span>
-                    <span class="pill">Soft canvas</span>
-                    <span class="pill pill--primary">Bold CTAs</span>
-                </div>
-
-                <p class="body-xs section__hint">
-                    Este sistema se extiende a:
-                </p>
-                <ul class="list body-xs">
-                    <li>Tarjetas de perfil de talento.</li>
-                    <li>Listas de casting y filtros.</li>
-                    <li>Dashboards para clientes.</li>
-                    <li>Layouts de marketing y email.</li>
-                </ul>
-            </section>
-
-            <!-- Icon style -->
-            <section class="section">
-                <h2 class="section-title">Icon style</h2>
-                <p class="body-md section__description">
-                    Iconografía basada en <strong>Material Symbols Rounded</strong>:
-                    formas suaves, peso medio y tamaño consistente en toda la
-                    experiencia.
-                </p>
-
-                <div class="icon-row">
-                    <article class="icon-card">
-                        <span class="material-symbols-rounded icon-card__icon">
-                            star
-                        </span>
-                        <p class="label-md">Acciones destacadas</p>
-                        <p class="body-xs">
-                            Usar en botones primarios o badges de talento verificado.
-                        </p>
-                    </article>
-
-                    <article class="icon-card">
-                        <span class="material-symbols-rounded icon-card__icon">
-                            person
-                        </span>
-                        <p class="label-md">Perfil de talento</p>
-                        <p class="body-xs">
-                            Identifica secciones relacionadas con personas y castings.
-                        </p>
-                    </article>
-
-                    <article class="icon-card">
-                        <span class="material-symbols-rounded icon-card__icon">
-                            mail
-                        </span>
-                        <p class="label-md">Comunicación</p>
-                        <p class="body-xs">
-                            Uso en inbox, notificaciones y mensajes a talentos.
-                        </p>
-                    </article>
-                </div>
-
-                <ul class="list body-xs">
-                    <li>
-                        Preferir estilo <strong>Rounded</strong> para mantener la
-                        suavidad general.
-                    </li>
-                    <li>Tamaño base: 24 px en UI, con padding generoso alrededor.</li>
-                    <li>
-                        No mezclar estilos de icono (outline, filled, duotone) en el
-                        mismo componente.
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Layout & spacing -->
-            <section class="section">
-                <h2 class="section-title">Layout & spacing</h2>
-                <p class="body-md section__description">
-                    El layout utiliza un grid centrado con tarjetas de 900&nbsp;px máx.
-                    El sistema de espaciado sigue incrementos de 4&nbsp;px, agrupados en
-                    pasos fáciles de aplicar.
-                </p>
-
-                <div class="spacing-scale">
-                    <div class="spacing-swatch">
-                        <div class="spacing-swatch__bar spacing-swatch__bar--xs"></div>
-                        <p class="label-sm">XS · 4 px</p>
-                        <p class="body-xs">Separaciones mínimas, iconos, chips.</p>
-                    </div>
-                    <div class="spacing-swatch">
-                        <div class="spacing-swatch__bar spacing-swatch__bar--sm"></div>
-                        <p class="label-sm">SM · 8 px</p>
-                        <p class="body-xs">Distancia entre elementos de un mismo bloque.</p>
-                    </div>
-                    <div class="spacing-swatch">
-                        <div class="spacing-swatch__bar spacing-swatch__bar--md"></div>
-                        <p class="label-sm">MD · 16 px</p>
-                        <p class="body-xs">Padding interno de tarjetas y secciones.</p>
-                    </div>
-                    <div class="spacing-swatch">
-                        <div class="spacing-swatch__bar spacing-swatch__bar--lg"></div>
-                        <p class="label-sm">LG · 24 px</p>
-                        <p class="body-xs">Espacio entre secciones grandes.</p>
-                    </div>
-                </div>
-
-                <ul class="list body-xs">
-                    <li>Las tarjetas nunca tocan los bordes de la pantalla.</li>
-                    <li>Las secciones se separan al menos por 24&nbsp;px.</li>
-                    <li>El contenido importante se alinea en un grid de 12 columnas.</li>
-                </ul>
-            </section>
+            </div>
         </section>
     </main>
+
+    <!-- Tiny tab script -->
+    <script>
+      (function () {
+        var tabs = document.querySelectorAll(".tab-bar__tab");
+        var panels = document.querySelectorAll(".tab-panel");
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            var targetId = tab.getAttribute("data-tab-target");
+
+            tabs.forEach(function (t) {
+              t.classList.remove("is-active");
+            });
+            panels.forEach(function (panel) {
+              panel.classList.remove("is-active");
+            });
+
+            tab.classList.add("is-active");
+            var targetPanel = document.getElementById(targetId);
+            if (targetPanel) {
+              targetPanel.classList.add("is-active");
+            }
+          });
+        });
+      })();
+    </script>
 </body>
 </html>
